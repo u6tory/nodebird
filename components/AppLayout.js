@@ -36,7 +36,6 @@ const AppLayout = ({ children }) => {
       </Menu>
       <Row gutter={8}>
         <Col xs={24} md={6}>
-          왼쪽메뉴
           {isLoggedIn ? (
             <UserProfile setIsLoggedIn={setIsLoggedIn} />
           ) : (
@@ -44,13 +43,14 @@ const AppLayout = ({ children }) => {
           )}
         </Col>
         <Col xs={24} md={12}>
-          가운데메뉴
+          {children}
         </Col>
         <Col xs={24} md={6}>
-          오른쪽메뉴
+          <a href="/" target="_blank" rel="noreferrer noopenner">
+            Made by ZeroCho
+          </a>
         </Col>
       </Row>
-      {children}
     </div>
   );
 };
